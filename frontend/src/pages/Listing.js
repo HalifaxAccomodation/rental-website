@@ -9,7 +9,7 @@ const Listings = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/api/properties")
+      .get("https://rental-website-2l24.onrender.com/api/properties")
       .then((res) => {
         setProperties(res.data);
         setLoading(false);

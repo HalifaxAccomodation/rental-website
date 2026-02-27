@@ -16,13 +16,16 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      await axios.post("http://localhost:5001/api/contact", formData);
+      await axios.post(
+        "https://rental-website-2l24.onrender.com/api/contact",
+        formData,
+      );
       setStatus("✅ Thank you! John will contact you within 24 hours.");
       setFormData({ name: "", email: "", phone: "", message: "" });
       setTimeout(() => setStatus(""), 5000); // Auto clear success
     } catch (error) {
       setStatus(
-        "❌ Sorry, message failed. Please call (905) 555-0123 or try again."
+        "❌ Sorry, message failed. Please call (905) 555-0123 or try again.",
       );
       setTimeout(() => setStatus(""), 5000); // Auto clear error
     }

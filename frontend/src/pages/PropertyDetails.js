@@ -16,7 +16,7 @@ const PropertyDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/api/properties/${id}`)
+      .get(`https://rental-website-2l24.onrender.com/api/properties/${id}`)
       .then((res) => {
         setProperty(res.data);
         setLoading(false);
